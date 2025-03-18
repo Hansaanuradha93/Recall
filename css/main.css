@@ -223,7 +223,7 @@ nav.secondary-nav ul li a {
     .phone {
         position: absolute;
         width: 500px;
-        right: -200px;
+        right: -230px;
     }
 
     .cta-btns {
@@ -287,5 +287,64 @@ nav.secondary-nav ul li a {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+}
+
+/* Media Queries -- Desktop */
+@media only screen and (min-width: 950px) {
+    .wrapper {
+        max-width: 1000px;
+        margin: 2em auto;
+    }
+
+    .phone {
+        width: 500px;
+        right: 0px;
+    }
+
+    section.hero .right-col {
+        width: 500px;
+        height: 600px;
+        overflow: inherit;
+    }
+
+    /* Feature Section */
+    section.features {
+        margin-top: 0em;
+    }
+    section.features .wrapper ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        height: 300px;
+    }
+
+    section.features .wrapper ul li:last-of-type {
+        grid-column: auto;
+        align-self: end;
+    }
+
+    section.features .wrapper ul li:nth-of-type(2) {
+        align-self: center;
+    }
+
+    section.features:before {
+        left: 20%;
+    }
+
+    /* Testimonials Section */
+    section.testimonial {
+
+        display: flex;
+        align-items: center;
+        gap: 4em;
+        margin: 12em 0;
+    }
+
+    .testimonial-quote, testimonial-info {
+        flex: 1
+    }
+
+    section.testimonial h2 {
+        margin-top: 0;
     }
 }
